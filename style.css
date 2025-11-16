@@ -1,0 +1,143 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: Arial, sans-serif;
+
+}
+.nav-bar{
+display: flex;
+justify-content: space-between;
+align-items: center;
+background-color: cadetblue;
+padding: 10px 20px;
+
+}
+.nav-link{
+    display: flex;
+    gap: 20px;
+    list-style: none;
+}
+.nav-link li a{
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    font-family: 'Times New Roman', Times, serif;
+}
+.menu{
+    display: none;
+}
+.logo img{
+    width: 80px;
+    height: auto;
+}
+.product-grid{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    margin: 10px 20px;
+    align-items: center;
+    justify-content: center;
+
+}
+.product-grid a{
+    text-decoration: none;
+}
+.product-card{
+    background-color: rgb(215, 230, 243);
+    /* width: 100%;
+    height: auto; */
+    padding: 10px;
+    border-radius: 10px;
+    text-align: center;
+
+
+}
+.product-card img{
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+.title{
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: black ;
+    font-style: bold;
+}
+.price{
+    font-size: 18px;
+    color: green;
+    font-weight: bold;
+}
+.nav-link li a:hover{
+    color: blue;
+    transition: 0.3s;
+    font-size: 21px;
+}
+.product-card:hover{
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transform: translateY(-5px);
+    transition: 0.3s;
+}
+.bottom-bar{
+    background-color: cornflowerblue;
+    display: none;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+}
+.bottom-link{
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+    padding: 10px 0;
+}
+.bottom-link a{
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+}
+.bottom-link li{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+}
+/* Laptop View */
+@media (max-width: 1200px) {
+
+}
+
+/* Mobile View */
+@media (max-width: 768px) {
+    .menu{
+        display: block;
+        font-size: 30px;
+        color: rgb(0, 0, 0);
+        cursor: pointer;
+        
+    }
+    .nav-link{
+        display: none;
+    }
+    .logo img{
+        width: 50px;
+    }
+    .product-grid{
+        grid-template-columns: repeat(2, 1fr);
+        margin: 5px 10px;
+        margin-bottom: 70px;
+    }
+    .bottom-bar{
+        display: block;
+        z-index: 1;
+
+    }
+
+}
